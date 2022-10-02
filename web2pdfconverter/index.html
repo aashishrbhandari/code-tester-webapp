@@ -54,7 +54,7 @@
             .then((response) => response.json())
             .then((data) => {
                 console.log(data);
-                document.querySelector(".web2pdfconvert_response").textContent = data;
+                document.querySelector(".web2pdfconvert_response").textContent = JSON.stringify(data, null, 5);
             });
 
 
