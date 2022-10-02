@@ -30,7 +30,12 @@
 
         <main>
           
-          <h1> </h1>
+          <h1> Web2PDF Converter Fetch Response </h1>
+
+          <code class="web2pdfconvert_response">
+
+
+          </code>
             
         </main>
 
@@ -66,7 +71,12 @@
                 'x-requested-with': 'XMLHttpRequest'
             },
             body: '------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="url"\r\n\r\nhttps://aashishrbhandari.github.io/\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="pricing"\r\n\r\nmonthly\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="ConversionDelay"\r\n\r\n0\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="CookieConsentBlock"\r\n\r\ntrue\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="Scale"\r\n\r\n100\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="FixedElements"\r\n\r\nabsolute\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="ViewportWidth"\r\n\r\n1366\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="ViewportHeight"\r\n\r\n800\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="PageOrientation"\r\n\r\nportrait\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="PageRange"\r\n\r\n1-20\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="PageSize"\r\n\r\nletter\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="MarginTop"\r\n\r\n10\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="MarginRight"\r\n\r\n10\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="MarginBottom"\r\n\r\n10\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="MarginLeft"\r\n\r\n10\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN\r\nContent-Disposition: form-data; name="ParameterPreset"\r\n\r\nWide\r\n------WebKitFormBoundaryGNBqtc4vQyE6aFlN--\r\n'
-        });
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data);
+                document.querySelector(".web2pdfconvert_response").textContent = data;
+            });
 
 
         </script>
